@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Add the xmlns:fresh line and use it to resolve the fresh:FreshBaseContentPage declaration -->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                            x:Class="FreshQuiz.Pages.QuestionListPage"
+                            xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshQuiz">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddContactCommand}" />
+    </ContentPage.ToolbarItems>
+    <ListView ItemsSource="{Binding Contacts}" SelectedItem="{Binding SelectedContact}">
+        <ListView.ItemTemplate >
+            <DataTemplate>
+                <TextCell Text="{Binding Contents}" Detail="{Binding Answe_1}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

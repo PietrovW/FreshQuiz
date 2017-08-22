@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                            x:Class="FreshQuiz.Pages.QuestionPage" Title="{ Binding QuestionTitle }"
+                            xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshQuiz">
+    <ContentPage.Content>
+        <StackLayout Padding="15" Spacing="5">
+            <Label Text="Contact Name" />
+            <Entry Text="{Binding QuestionContents}" />
+            <Label Text="Contact Answe_1" />
+            <Entry Text="{Binding ContactAnswe_1}" />
+            <Label Text="Contact Answe_2" />
+            <Entry Text="{Binding ContactAnswe_2}" />
+            <Label Text="Contact Answe_3" />
+            <Entry Text="{Binding ContactAnswe_3}" />
+            <Button Text="Save" Command="{Binding SaveCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
